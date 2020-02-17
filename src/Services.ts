@@ -27,3 +27,11 @@ export var round = (pokemon1: Pokemon, pokemon2: Pokemon) => {
         attack(pokemon2, pokemon1, indice2);
     }
 }
+
+export var fight = (pokemon1: Pokemon, pokemon2: Pokemon) => {
+    while(pokemon1.currentLifePoints > 0 && pokemon2.currentLifePoints > 0 ){
+        round(pokemon1, pokemon2);
+        if(pokemon1.currentLifePoints < 0) console.log(pokemon2.name+" a gagné!")
+        else console.log(pokemon1.name+" a gagné!")
+    }
+}
