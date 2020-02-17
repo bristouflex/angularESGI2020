@@ -47,4 +47,8 @@ describe("Test attack of Pokemons", () => {
     test("Dracaufeu attaque Bulbizarre", () => {
         expect(attack(dracaufeu, bulbizare, 0)).toBe(bulbizare)
     })
+
+    test("Bulbizarre attaque Dracaufeu", () => {
+        expect(attack(bulbizare, dracaufeu, 0)).toBe(dracaufeu)
+    })
 });
